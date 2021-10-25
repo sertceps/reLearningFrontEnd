@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Footer</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 60px;
+        }
+        body{
+            background-color: skyblue;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        article{
+            background-color: slateblue;
+            /* flex: auto; */
+            flex: 1;
+        }
+        footer{
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+   <header>HEADER</header> 
+   <article>ARTICLE</article>
+   <footer>FOOTER</footer>
+</body>
+</html>
