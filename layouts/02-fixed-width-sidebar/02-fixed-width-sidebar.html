@@ -5,13 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fixed Width Sidebar</title>
+    <!-- https://juejin.cn/post/6844903517241491463#comment -->
+    <!-- https://segmentfault.com/a/1190000018665605 -->
+    <!-- https://www.freecodecamp.org/news/learn-css-grid-by-building-5-layouts/ -->
+    <!-- https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #ccc;
+        min-height: 100vh;
+        /* min-height: 怎么回事; */
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        height: 60px;
+      }
+
+      .content {
+        display: flex;
+        flex: 1;
+      }
+      .content aside {
+        background-color: skyblue;
+        width: 200px;
+      }
+
+      .content article {
+        background-color: burlywood;
+        flex: 1;
+      }
+
+      footer {
+        height: 60px;
+      }
+    </style>
   </head>
 
   <body>
     <header>HEADER</header>
     <div class="content">
-      <article>ARTICLE</article>
       <aside>ASIDE</aside>
+      <article>ARTICLE</article>
     </div>
     <footer>FOOTER</footer>
   </body>
