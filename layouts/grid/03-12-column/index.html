@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12 Column</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        background-color: skyblue;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 12px;
+        align-items: center;
+      }
+      aside {
+        background-color: teal;
+        grid-column: 2 / span 4;
+        /* grid-column-start: 2; */
+        /* grid-column-end: 6; */
+        /* grid-column-end: span 4; */
+      }
+      article {
+        background-color: tan;
+        grid-column: 6 / span 6;
+        min-height: 60%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside>ASIDE</aside>
+      <article>ARTICLE</article>
+    </main>
+  </body>
+</html>
