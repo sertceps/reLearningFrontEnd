@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Sidebar</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+      }
+      aside {
+        width: 200px;
+        overflow-y: auto;
+        height: 100vh;
+      }
+      .content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+      .content header {
+        height: 60px;
+        background-color: tomato;
+      }
+      .content article {
+        background-color: teal;
+        flex: 1;
+      }
+      .content footer {
+        background-color: violet;
+        height: 60px;
+      }
+
+      /* 滚动条 */
+      /* webkit */
+      aside::-webkit-scrollbar {
+        width: 6px;
+        background-color: #eee;
+      }
+      aside::-webkit-scrollbar-thumb {
+        background-color: #c1c1c1;
+      }
+      aside::-webkit-scrollbar-thumb:hover {
+        background-color: #a8a8a8;
+      }
+      aside::-webkit-scrollbar-thumb:active {
+        background-color: #787878;
+      }
+      /* Firefox */
+      aside {
+        scrollbar-width: thin;
+        scrollbar-color: #c1c1c1 #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <ul>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+      </ul>
+    </aside>
+    <div class="content">
+      <header>HEADER</header>
+      <article>ARTICLE</article>
+      <footer>FOOTER</footer>
+    </div>
+  </body>
+</html>
