@@ -1,0 +1,41 @@
+<!-- https://www.freecodecamp.org/news/learn-css-grid-by-building-5-layouts/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pancake Stack</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: skyblue;
+      }
+      main {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: 60px 1fr 60px;
+      }
+      header {
+        background-color: #ee7b5c;
+        /* height: 60px; */
+      }
+      footer {
+        background-color: #ee7b5c;
+        /* height: 60px; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <header>HEADER</header>
+      <article>ARTICLE</article>
+      <footer>FOOTER</footer>
+    </main>
+  </body>
+</html>

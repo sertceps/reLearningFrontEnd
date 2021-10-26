@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- https://www.freecodecamp.org/news/learn-css-grid-by-building-5-layouts/ -->
+    <!-- https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd -->
+    <!-- https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html -->
     <style>
       * {
         margin: 0;
@@ -12,9 +15,13 @@
       }
 
       main {
+        min-height: 100vh;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 50px calc(100vh - 100px) 50px;
+        /* 定义每一行的列宽 */
+        /* fr 为 fraction，片段(可以进行比例划分) */
+        grid-template-rows: 60px auto 60px;
+        /* 定义每一行的行高 */
       }
       header {
         grid-column: span 12;
