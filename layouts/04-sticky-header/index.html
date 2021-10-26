@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Header</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: cadetblue;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+      }
+      header {
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* 文档 */
+        background-color: coral;
+      }
+      article {
+        flex: 1;
+        height: 1000px;
+      }
+      footer {
+        height: 60px;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+    <article>ARTICLE</article>
+    <footer>FOOTER</footer>
+  </body>
+</html>
