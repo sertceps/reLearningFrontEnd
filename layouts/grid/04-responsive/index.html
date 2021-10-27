@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #ccc;
+      }
+
+      /* grid-area */
+      header {
+        grid-area: header;
+      }
+      nav {
+        grid-area: nav;
+      }
+      aside {
+        grid-area: aside;
+      }
+      section {
+        grid-area: section;
+      }
+      article {
+        grid-area: article;
+      }
+      footer {
+        grid-area: footer;
+      }
+
+      /* mobile */
+      /* default */
+      main {
+        display: grid;
+        min-height: 100vh;
+
+        gap: 24px;
+        grid-template-rows: auto auto 1fr auto auto auto;
+        grid-template-areas: "header" "nav" "article" "aside" "section" "footer";
+      }
+      header {
+        height: 60px;
+        background-color: skyblue;
+      }
+      nav {
+        background-color: teal;
+      }
+      article {
+        background-color: green;
+      }
+      aside {
+        background-color: hotpink;
+      }
+      section {
+        background-color: deepskyblue;
+      }
+      footer {
+        height: 60px;
+        background-color: fuchsia;
+      }
+      @media (min-width: 720px) {
+        main {
+          grid-template-rows: auto auto 1fr auto;
+          grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "aside article article"
+            "section footer footer";
+        }
+        header {
+          background-color: gray;
+          height: 60px;
+        }
+        nav {
+          background-color: teal;
+          height: 60px;
+        }
+        article {
+          background-color: tomato;
+        }
+        aside {
+          background-color: skyblue;
+        }
+        section {
+          background-color: snow;
+        }
+        footer {
+          background-color: violet;
+          height: 60px;
+        }
+      }
+
+      @media (min-width: 1020px) {
+        main {
+          grid-template-rows: auto auto 1fr auto;
+          grid-template-areas:
+            "header header header header"
+            "aside nav nav section"
+            "aside article article section"
+            "footer footer footer footer";
+        }
+        nav {
+          background-color: teal;
+        }
+        article {
+          background-color: tomato;
+        }
+        aside {
+          background-color: thistle;
+        }
+        section {
+          background-color: snow;
+        }
+        footer {
+          background-color: violet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>HEADER</header>
+      <nav>NAVIGATION</nav>
+      <article>CONTENT</article>
+      <aside>ASIDE</aside>
+      <section>ADS</section>
+      <footer>FOOTER</footer>
+    </main>
+  </body>
+</html>
